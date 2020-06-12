@@ -132,9 +132,10 @@ function clearEntry () {
   const numArr = calculator.displayVal.split('');
   // removing the last element from the array
   numArr.pop();  
+  let numberAfterClearingLastEntry = numArr.join('');
   // Updating display screen and first operand(parsed) value to the result after popping the last element and joining the array together.
-  calculator.displayVal = numArr.join('');
-  calculator.firstOperand = parseFloat(numArr.join(''));
+  calculator.displayVal = numberAfterClearingLastEntry;
+  calculator.firstOperand = parseFloat(numberAfterClearingLastEntry);
   updateDisplay();
 }
 
